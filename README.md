@@ -48,7 +48,9 @@ Source: [github.com/ebob9/archive_today_chrome_extension](https://github.com/ebo
 
 ## Development and publication
 
-No dependencies or build step are required to load the extension. Run `node --test tests/*.test.cjs` for security and behavior regression tests. On Windows, `powershell -NoProfile -File scripts/build.ps1` creates an allowlisted upload ZIP under `dist/`. The package excludes tests, tooling, IDE files, and Git metadata.
+No dependencies or build step are required to load the extension. Regression tests require Node.js 18 or newer. On Windows, run `powershell -NoProfile -File scripts/test.ps1`; this finds Node on PATH or an installed PyCharm agent runtime. If needed, pass `-NodePath "C:\path\to\node.exe"`. Where Node is on PATH, `node --test tests/*.test.cjs` also runs the tests.
+
+On Windows, `powershell -NoProfile -File scripts/build.ps1` creates an allowlisted upload ZIP under `dist/` without requiring Node.js. The package excludes tests, tooling, IDE files, and Git metadata.
 
 Original artwork: [icons/icon.svg](icons/icon.svg), with PNGs at 16, 32, 48, and 128 pixels. Regenerate PNGs and the promotional tile on Windows with `powershell -NoProfile -File scripts/create-artwork.ps1`.
 

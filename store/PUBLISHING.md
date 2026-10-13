@@ -13,46 +13,44 @@ Release version: **1.0.1**. Upload package: `dist/archive-today-helper-1.0.1.zip
 
 ## Commit and publish the source
 
-- [ ] Stage the final versions of these files and directories:
+- [x] Stage the final versions of these files and directories:
 
   ```powershell
   git add .gitignore README.md PRIVACY.md SECURITY.md manifest.json background.js settings.js options.html options.css options.js icons scripts store tests
   ```
 
-  This includes all icon PNGs and the SVG source, both PowerShell scripts, both test files, and the store documentation and promotional tile. LICENSE is already tracked and unchanged.
-- [ ] Review `git diff --cached --stat` and `git diff --cached`. Some files may already be staged from an earlier revision; the command above stages their final contents.
-- [ ] Commit, push, and make the GitHub repository public.
-- [ ] Enable GitHub private vulnerability reporting and confirm issues are available for support.
-
-Keep `dist/` and `.idea/` out of the commit. They are ignored. Upload the generated ZIP to the store separately.
+  This includes all icon PNGs and the SVG source, the PowerShell scripts, both test files, and the store documentation and promotional tile. LICENSE is already tracked and unchanged.
+- [x] Review `git diff --cached --stat` and `git diff --cached`. Some files may already be staged from an earlier revision; the command above stages their final contents.
+- [x] Commit, push, and make the GitHub repository public.
+- [x] Enable GitHub private vulnerability reporting and confirm issues are available for support.
 
 ## Verify the extension
 
-- [ ] Load the final package in a clean Chrome profile and check that no extension errors are reported.
-- [ ] Verify a link containing `?a=1&b=2#section` reaches the intended submission form intact; check search results too.
-- [ ] Confirm no menu appears for `mailto:` or `javascript:` links.
-- [ ] Change each domain preference, reload options, and verify persistence. Check an alternate domain live if available.
-- [ ] Reload/update the extension and check both menus appear once.
-- [ ] Confirm the settings page is readable in light/dark mode and with keyboard navigation.
-- [ ] Test an upgrade from the old extension's settings.
-- [ ] Test a new, unarchived public URL you control if this was not included in prior manual testing. Complete Save/CAPTCHA if shown. See [submission research](SUBMISSION-RESEARCH.md).
-- [ ] Choose Custom for each action. Test prefix, optional suffix, and both encoding choices with a trusted HTTPS service. Save and reopen options to verify all values restore, then switch back to a preset.
+- [x] Load the final package in a clean Chrome profile and check that no extension errors are reported.
+- [x] Verify a link containing `?a=1&b=2#section` reaches the intended submission form intact; check search results too.
+- [x] Confirm no menu appears for `mailto:` or `javascript:` links.
+- [x] Change each domain preference, reload options, and verify persistence. Check an alternate domain live if available.
+- [x] Reload/update the extension and check both menus appear once.
+- [x] Confirm the settings page is readable in light/dark mode and with keyboard navigation.
+- [x] Test an upgrade from the old extension's settings.
+- [x] Test a new, unarchived public URL you control if this was not included in prior manual testing. Complete Save/CAPTCHA if shown. See [submission research](SUBMISSION-RESEARCH.md).
+- [x] Choose Custom for each action. Test prefix, optional suffix, and both encoding choices with a trusted HTTPS service. Save and reopen options to verify all values restore, then switch back to a preset.
 
 ## Prepare public assets and URLs
 
-- [ ] Verify the source, support, and [privacy policy](https://github.com/ebob9/archive_today_chrome_extension/blob/HEAD/PRIVACY.md) links without signing in. The policy must be publicly accessible before submitting for review.
-- [ ] Capture at least one actual Chrome screenshot of the right-click menu, ideally also the options page. Use 1280×800 or 640×400 pixels. Keep private URLs and personal browser details out of screenshots.
-- [ ] Use `icons/icon-128.png` as the store icon and `store/promo-440x280.png` as the required small promotional tile.
-- [ ] Review the title, description, attribution, privacy disclosures, and permission justifications in [LISTING.md](LISTING.md).
+- [x] Verify the source, support, and [privacy policy](https://github.com/ebob9/archive_today_chrome_extension/blob/HEAD/PRIVACY.md) links without signing in. The policy must be publicly accessible before submitting for review.
+- [x] Capture at least one actual Chrome screenshot of the right-click menu, ideally also the options page. Use 1280×800 or 640×400![img.png](img.png) pixels. Keep private URLs and personal browser details out of screenshots.
+- [x] Use `icons/icon-128.png` as the store icon and `store/promo-440x280.png` as the required small promotional tile.
+- [x] Review the title, description, attribution, privacy disclosures, and permission justifications in [LISTING.md](LISTING.md).
 
 ## Developer account
 
-- [ ] Register a Chrome Web Store developer account and pay the one-time registration fee if not already registered.
-- [ ] Set the publisher name and verify the contact email. Complete any additional account requirements shown in the dashboard.
+- [x] Register a Chrome Web Store developer account and pay the one-time registration fee if not already registered.
+- [x] Set the publisher name and verify the contact email. Complete any additional account requirements shown in the dashboard.
 
 ## Package and submit
 
-1. Run `node --test tests/*.test.cjs`, then `powershell -NoProfile -File scripts/build.ps1` (PowerShell on Windows).
+1. Run `powershell -NoProfile -File scripts/test.ps1`, then `powershell -NoProfile -File scripts/build.ps1` (PowerShell on Windows). The test script finds Node on PATH or an installed PyCharm agent runtime. If neither is available, install Node.js 18 or newer or supply `-NodePath "C:\path\to\node.exe"`. Building the ZIP itself does not require Node.js.
 2. Upload `dist/archive-today-helper-1.0.1.zip` in the Chrome Web Store Developer Dashboard using your registered developer account.
 3. Fill out the store listing from LISTING.md, add the required graphics, and enter the public homepage, support, and privacy-policy URLs.
 4. Complete Privacy practices: single purpose, permission justifications, no remote code, and data disclosures consistent with PRIVACY.md. Selected links are sent to the selected service, including custom destinations; the developer collects no data.

@@ -4,7 +4,7 @@
 
 Archive.today Helper (Unofficial)
 
-## Short description (matches manifest)
+## Short description
 
 Right-click links to submit to archive.today or search for snapshots. Unofficial, open-source hobby project (MIT).
 
