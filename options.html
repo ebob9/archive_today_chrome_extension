@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archive.today Helper (Unofficial) — Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <img src="icons/icon-128.png" width="64" height="64" alt="">
+    <h1>Archive.today Helper <small>(Unofficial)</small></h1>
+    <p>Right-click a web link to submit it or search for existing snapshots.</p>
+    <form id="settings">
+      <label for="archiveDomain">Submit links using</label>
+      <select id="archiveDomain" name="archiveDomain"></select>
+      <fieldset id="archiveFields" hidden>
+        <legend>Custom submit destination</legend>
+        <label for="archiveCustomDomain">HTTPS origin</label>
+        <input id="archiveCustomDomain" type="url" placeholder="https://archive.is">
+        <label for="archivePath">Between origin and link</label>
+        <input id="archivePath" type="text" maxlength="2048" spellcheck="false" placeholder="/?run=1&amp;url=">
+        <label for="archiveSuffix">After link (optional)</label>
+        <input id="archiveSuffix" type="text" maxlength="2048" spellcheck="false" placeholder="&amp;option=value">
+        <label for="archiveEncoding">Link encoding</label>
+        <select id="archiveEncoding">
+          <option value="encoded">URL-encoded (query parameter)</option>
+          <option value="raw">Raw URL (path-style; fragments escaped)</option>
+        </select>
+      </fieldset>
+      <label for="searchDomain">Search for links using</label>
+      <select id="searchDomain" name="searchDomain"></select>
+      <fieldset id="searchFields" hidden>
+        <legend>Custom search destination</legend>
+        <label for="searchCustomDomain">HTTPS origin</label>
+        <input id="searchCustomDomain" type="url" placeholder="https://archive.is">
+        <label for="searchPath">Between origin and link</label>
+        <input id="searchPath" type="text" maxlength="2048" spellcheck="false" placeholder="/">
+        <label for="searchSuffix">After link (optional)</label>
+        <input id="searchSuffix" type="text" maxlength="2048" spellcheck="false" placeholder="&amp;option=value">
+        <label for="searchEncoding">Link encoding</label>
+        <select id="searchEncoding">
+          <option value="encoded">URL-encoded (query parameter)</option>
+          <option value="raw">Raw URL (path-style; fragments escaped)</option>
+        </select>
+      </fieldset>
+      <p>Both default to archive.is. Choose another domain if one is unavailable in your region.</p>
+      <p>Custom URLs are built as <code>origin + before-link text + link + after-link text</code>. Choose URL-encoded for a link inside a query parameter; choose Raw URL for archive.today's search path.</p>
+      <p>Custom actions send links to the destination you enter. Only use a service you trust. Custom text is synced through Chrome; do not put passwords or secret tokens in these settings.</p>
+      <p>Submit uses the archive homepage entry point. If needed, finish the save or CAPTCHA there; a new snapshot is not guaranteed.</p>
+      <button id="save" type="submit">Save settings</button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+    <p>Each action sends the selected link to your chosen service in a new tab. Links can contain private information; only submit links you want to share with that service. Your preferences may sync through Chrome.</p>
+    <footer>
+      <p>An independent hobby project, unaffiliated with archive.today. Open source under the MIT license.</p>
+      <a href="https://github.com/ebob9/archive_today_chrome_extension" target="_blank" rel="noopener noreferrer">Source code</a> ·
+      <a href="https://github.com/ebob9/archive_today_chrome_extension/blob/HEAD/PRIVACY.md" target="_blank" rel="noopener noreferrer">Privacy</a>
+    </footer>
+  </main>
+  <script src="settings.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
