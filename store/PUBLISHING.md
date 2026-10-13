@@ -62,6 +62,16 @@ Release version: **1.0.1**. Upload package: `dist/archive-today-helper-1.0.1.zip
 
 No extension account or login is required. Install the extension and visit any page containing a normal HTTPS link. Right-click that link to see the two archive actions. Each opens a tab on archive.is by default. Open Extension options to change either domain. The archive service is external and may require a CAPTCHA, be unavailable, or have no snapshot of a particular link.
 
+## Resubmit after a description rejection
+
+For violation reference **Yellow Argon** (excessive keywords), replace the dashboard's detailed description with the revised **Detailed description** section in LISTING.md. The alternate-domain list has been removed. Copy only the description text, not the dashboard guidance or data-disclosure instructions.
+
+1. Update the English (United States) description and any other localized descriptions containing the same domain list.
+2. Save Draft and reopen the preview to confirm the list is gone.
+3. Resubmit the corrected draft for review. The extension package and version do not need to change for this description-only correction.
+
+If reviewer notes are available, use: "Removed the alternate-domain keyword list and shortened the description to explain the extension's features and privacy practices."
+
 ## Official references
 
 - [Developer registration](https://developer.chrome.com/docs/webstore/register)

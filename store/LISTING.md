@@ -6,24 +6,24 @@ Archive.today Helper (Unofficial)
 
 ## Short description
 
-Right-click links to submit to archive.today or search for snapshots. Unofficial, open-source hobby project (MIT).
+Right-click links to submit to archive.today or search for snapshots. Unofficial, open-source project (MIT).
 
 ## Detailed description
 
-Submit links to archive.today or search for existing snapshots directly from Chrome's right-click menu.
+Submit a web link to archive.today or find existing snapshots from Chrome's right-click menu.
 
 Right-click an HTTP or HTTPS link and choose:
 
-- Submit link to archive.today — opens the archive submission page in a new tab.
-- Search for link in archive.today — opens a search for existing snapshots in a new tab.
+- Submit — opens the submission page in a new tab.
+- Search — opens a search for existing snapshots in a new tab.
 
-Choose separate archive domains for submission and search in the extension options. Both default to archive.is. Preset choices are archive.is, archive.today, archive.ph, archive.li, archive.vn, archive.fo, and archive.md. Custom mode lets you enter a trusted HTTPS origin, text before the selected link, optional text after it, and a link-encoding choice for either action. Availability depends on the service and your network. Submit opens the archive homepage entry point; complete any save prompts or CAPTCHA there. Opening the page does not guarantee creation of a snapshot.
+In Options, choose separate destinations for submission and search. Use a preset or configure a trusted HTTPS destination with custom URL formatting. Complete any save prompts or CAPTCHA on the service's website. Capture success depends on the service and the selected page.
 
-This independent hobby project is unofficial and is not affiliated with or endorsed by archive.today. The code and original icon are open source under the MIT license so users can inspect, validate, modify, and redistribute them.
+This is an independent hobby project, unaffiliated with the archive service. Its code and original icon are open source under the MIT license, so you can inspect and modify them.
 
-The extension uses only context menu and preference storage permissions. There is no analytics, advertising, developer server, or background collection. Only links you explicitly choose are sent to the selected archive service or custom destination. Selected URLs may contain private information, and submission may make content public. Destination and custom URL preferences may sync through Chrome; do not put passwords or secret tokens in them. The developer receives neither links nor preferences.
+Only links you explicitly choose are sent to the selected service. URLs may contain private information, and submission may make content public. Preferences may sync through Chrome. The developer receives neither links nor preferences. There is no analytics, advertising, or developer-operated server.
 
-Archive.today's names and proprietary materials belong to their respective owners. Archived works belong to their respective rights holders. Service names are referenced for identification with an intent of fair use. This extension uses an original icon, not archive.today's logo. The MIT license covers this project's code and artwork only.
+Service names and archived content belong to their respective owners. The MIT license covers this project's code and original artwork.
 
 Source and support: https://github.com/ebob9/archive_today_chrome_extension
 Privacy: https://github.com/ebob9/archive_today_chrome_extension/blob/HEAD/PRIVACY.md
