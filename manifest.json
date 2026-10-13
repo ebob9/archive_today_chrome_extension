@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Archive.today Helper (Unofficial)",
   "version": "1.0.1",
-  "description": "Right-click links to submit to archive.today or search for snapshots. Unofficial, open-source hobby project (MIT).",
+  "description": "Right-click links to submit to archive.today or search for snapshots. Unofficial, open-source project (MIT).",
   "author": "Aaron Edwards",
   "homepage_url": "https://github.com/ebob9/archive_today_chrome_extension",
   "icons": {
