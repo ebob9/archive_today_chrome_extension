@@ -18,9 +18,7 @@ Only choose custom destinations you trust: selected links will be sent there. Pr
 
 ## Submitting new captures
 
-The built-in submit action opens `https://archive.is/?run=1&url=<encoded-link>` (or your chosen preset domain), using the homepage entry point. You may still need to press Save or complete a CAPTCHA. Search uses the original URL as a path on the selected archive domain.
-
-See [submission research](store/SUBMISSION-RESEARCH.md) for sources and verification limits. Custom mode allows testing alternative prefixes, including the previous `/submit/?url=`.
+The built-in submit action opens `https://archive.is/?run=1&url=<encoded-link>` (or your chosen preset domain), using the homepage entry point. You may still need to press Save or complete a CAPTCHA. Search uses the original URL as a path on the selected archive domain. Custom mode allows testing alternative prefixes, including the previous `/submit/?url=`.
 
 ## Install from source
 
